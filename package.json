@@ -1,0 +1,12 @@
+{
+  "name": "gulp_skeleton_simple",
+  "version": "1.0.0",
+  "description": "gulp skeleton simple",
+  "author": "hrfmmymt",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^1.7.2",
+    "gulp": "^3.8.10",
+    "gulp-less": "^1.3.7"
+  }
+}
