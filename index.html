@@ -2,47 +2,73 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>hrfmmymt</title>
+  <meta name="author" content="Hirofumi Miyamoto">
+  <meta property="og:url" content="http://hrfmmymt.github.io/">
+  <meta property="og:site_name" content="hrfmmymt">
+  <meta property="og:author" content="Hirofumi Miyamoto">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="hrfmmymt">
+  <meta property="og:description" content="hrfmmymt">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="app/css/swiper.min.css">
-  <link rel="stylesheet" href="app/css/style.css">
+  <title>hrfmmymt</title>
+  <link rel="stylesheet" href="app/css/style.css" media="screen">
 </head>
 <body>
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <section class="swiper-slide" data-hash="">
-        <h1>hrfmmymt</h1>
-        <div class="swiper-button-next swiper-button-black"></div>
-      </section>
-      <section class="swiper-slide" data-hash="tumblr"><a href="//hrfmmymt.tumblr.com/" class="link_tumblr"><span>tumblr</span></a></section>
-      <section class="swiper-slide" data-hash="works"><a href="//hrfmmymt.github.io/skillsheet/" class="link_works">Works</a></section>
-      <section class="swiper-slide" data-hash="twitter"><a href="//twitter.com/hrfmmymt" class="link_twitter"><span>Twitter</span></a></section>
-      <section class="swiper-slide" data-hash="facebook"><a href="//www.facebook.com/HrfmMymt" class="link_facebook"><span>Facebook</span></a></section>
-      <section class="swiper-slide" data-hash="instagram"><a href="//instagram.com/hrfmmymt/" class="link_instagram"><span>Instagram</span></a></section>
-      <section class="swiper-slide" data-hash="jsfiddle"><a href="//jsfiddle.net/user/hrfmmymt/fiddles/" class="link_jsfiddle"><span>JSFIDDLE</span></a></section>
-      <section class="swiper-slide" data-hash="github"><a href="//github.com/hrfmmymt" class="link_github"><span>GitHub</span></a></section>
-      <section class="swiper-slide" data-hash="soundcloud"><a href="//soundcloud.com/hrfmmymt" class="link_soundcloud"><span>SoundCloud</span></a></section>
-      <section class="swiper-slide" data-hash="lastfm"><a href="//www.lastfm.jp/user/hrfmmymt" class="link_lastfm"><span>last.fm</span></a></section>
-      <section class="swiper-slide" data-hash="dq10"><a href="//hiroba.dqx.jp/sc/character/810050181695/" class="link_dq10"><span>Saving the World.</span></a></section>
-      <section class="swiper-slide" data-hash="email"><a href="mailto:hrfmmymt@gmail.com" class="link_email"><span>Email</span></a></section>
-      <section class="swiper-slide" data-hash="copyright"><p>Copyright&nbsp;©<script>document.write(new Date().getFullYear())</script>&nbsp;hrfmmymt</p></section>
-    </div>
-    <div class="swiper-pagination"></div>
+  <div class="container">
+    <header>
+      <h1>hrfmmymt</h1>
+      <img itemprop="image" alt="俺画像" src="//graph.facebook.com/hrfmmymt/picture?width=320&height=320">
+    </header>
+
+    <section id="about">
+      <h3>about</h3>
+      <ul>
+        <li>Hirofumi Miyamoto</li>
+        <li>Japanese Web Designer / Developer</li>
+      </ul>
+    </section>
+
+    <section id="social">
+      <h3>social</h3>
+      <ul>
+        <li><a href="//hrfmmymt.tumblr.com/" class="link_tumblr">tumblr : weblog</a></li>
+        <li><a href="//hrfmmymt.github.io/skillsheet/" class="link_works">Works : 業務経歴</a></li>
+        <li><a href="//twitter.com/hrfmmymt" class="link_twitter">Twitter : 他愛のない事柄</a></li>
+        <li><a href="//www.facebook.com/HrfmMymt" class="link_facebook">Facebook : 向いてないらしい</a></li>
+        <li><a href="//instagram.com/hrfmmymt/" class="link_instagram">Instagram : 気軽な写真</a></li>
+        <li><a href="//soundcloud.com/hrfmmymt" class="link_soundcloud">SoundCloud : my favs</a></li>
+        <li><a href="//www.lastfm.jp/user/hrfmmymt" class="link_lastfm">last.fm : よく分かっていません</a></li>
+        <li><a href="//hiroba.dqx.jp/sc/character/810050181695/" class="link_dq10">Saving the World.</a></li>
+        <li><a href="mailto:hrfmmymt@gmail.com" class="link_email"><span>Email</span></a></li>
+      </ul>
+    </section>
+
+    <section id="codes">
+      <h3>codes</h3>
+      <ul>
+        <li><a href="//github.com/hrfmmymt" class="link_github">GitHub : プライベートアカウント</a></li>
+        <li><a href="//jsfiddle.net/user/hrfmmymt/fiddles/" class="link_jsfiddle">JSFIDDLE : 簡易テストやありがちなモジュール</a></li>
+        <li><a href="//qiita.com/hrfmmymt" class="link_jsfiddle">Qiita : さらに些細な記述</a></li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <footer id="copyright">
+      <p>Copyright&nbsp;©<script>document.write(new Date().getFullYear())</script>&nbsp;Hirofumi Miyamoto</p>
+    </footer>
   </div>
-  <script src="app/js/swiper.min.js"></script>
+
   <script>
-  var swiper = new Swiper('.swiper-container', {
-      pagination: '.swiper-pagination',
-      nextButton: '.swiper-button-next',
-      direction: 'vertical',
-      slidesPerView: 1,
-      paginationClickable: true,
-      mousewheelControl: true,
-      keyboardControl: true,
-      grabCursor: true,
-      loop: true,
-      hashnav: true
-  });
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-62083994-1', 'hrfmmymt.github.io');
+    ga('send', 'pageview');
+
   </script>
+
 </body>
 </html>
