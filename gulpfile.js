@@ -1,8 +1,7 @@
-var gulp, less, sync;
-
-gulp = require('gulp');
-less = require('gulp-less');
-sync = require('browser-sync');
+var gulp  = require('gulp'),
+    less  = require('gulp-less'),
+    babel = require('gulp-babel'),
+    sync  = require('browser-sync');
 
 gulp.task('server', function() {
   return sync({
@@ -19,9 +18,17 @@ gulp.task('reload', function() {
 });
 
 gulp.task('less', function() {
-  return gulp.src('./app/less/*.less')
+  return gulp.src('./src/less/*.less')
     .pipe(less())
-    .pipe(gulp.dest('./app/css'));
+    .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('babel', function() {
+  return gulp.src('./src/js/*.es6')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(gulp.dest('./dist/js/'))
 });
 
 gulp.task('watch', ['build', 'server'], function() {
