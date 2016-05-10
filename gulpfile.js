@@ -32,10 +32,11 @@ gulp.task('babel', function() {
 });
 
 gulp.task('watch', ['build', 'server'], function() {
-  gulp.watch('app/**/*.less', ['less']);
+  gulp.watch('./src/**/*.less', ['less']);
+  gulp.watch('./src/**/*.es6', ['babel']);
   gulp.watch('./*.html', ['reload']);
-  gulp.watch('app/**/*.css', ['reload']);
-  return gulp.watch('app/**/*.js', ['reload']);
+  gulp.watch('./dist/**/*.css', ['reload']);
+  return gulp.watch('./dist/**/*.js', ['reload']);
 });
 
 gulp.task('build', ['less']);
