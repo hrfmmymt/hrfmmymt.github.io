@@ -11,7 +11,9 @@
   <meta property="og:description" content="hrfmmymt">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <title>hrfmmymt</title>
-  <link rel="stylesheet" href="dist/css/style.min.css" media="screen">
+  <style>
+  html,body,div,header,section,footer,h1,h3,img,a,dl,dd,dt,ul,li,p,span{margin:0;padding:0}body{background-color:#eee;color:#222;font-family:Futura,Trebuchet MS,Arial,sans-serif;font-size:18px;padding:2%;margin:4%;-webkit-transition:-webkit-transform 4s ease-out;transition:transform 4s ease-out}.container{text-align:center}header h1{font-size:112px;font-size:7rem;margin-bottom:6%}
+  </style>
 </head>
 <body>
   <div class="container">
@@ -57,6 +59,18 @@
       <p>Copyright&nbsp;©<script>document.write(new Date().getFullYear())</script>&nbsp;Hirofumi Miyamoto</p>
     </footer>
   </div>
+
+  <script>
+  var cb = function() {
+  var l = document.createElement('link'); l.rel = 'stylesheet';
+  l.href = 'dist/css/style.min.css';
+  var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+  };
+  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+    webkitRequestAnimationFrame || msRequestAnimationFrame;
+  if (raf) raf(cb);
+  else window.addEventListener('load', cb);
+  </script>
 
   <script src="dist/js/script.js"></script>
 
