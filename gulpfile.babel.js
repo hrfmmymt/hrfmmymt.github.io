@@ -1,8 +1,7 @@
 import gulp from 'gulp';
 import less from 'gulp-less';
 import sourcemaps from 'gulp-sourcemaps';
-import autoprefixer from 'gulp-autoprefixer';
-// import minifyCss from 'gulp-minify-css';
+import pleeease from 'gulp-pleeease';
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import sync from 'browser-sync';
@@ -25,8 +24,9 @@ gulp.task('less', () => {
   return gulp.src('./src/less/*.less')
     .pipe(sourcemaps.init())
     .pipe(less())
-    // .pipe(minifyCss())
-    .pipe(autoprefixer())
+    .pipe(pleeease({
+      out: 'style.min.css',
+    }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css'));
 });
