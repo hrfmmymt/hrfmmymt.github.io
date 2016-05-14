@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import less from 'gulp-less';
 import sourcemaps from 'gulp-sourcemaps';
 import pleeease from 'gulp-pleeease';
+import critical from 'critical';
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import sync from 'browser-sync';
@@ -29,6 +30,18 @@ gulp.task('less', () => {
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('critical', ['build'], (cb) => {
+  critical.generate({
+    inline: true,
+    base: './',
+    src: 'index.html',
+    dest: 'dist/index-critical.html',
+    minify: true,
+    width: 320,
+    height: 480
+  });
 });
 
 gulp.task('babel', () => {
