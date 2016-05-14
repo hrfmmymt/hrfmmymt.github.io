@@ -11,10 +11,16 @@
   <meta property="og:description" content="hrfmmymt">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <title>hrfmmymt</title>
-  <style>
-  html,body,div,header,section,footer,h1,h3,img,a,dl,dd,dt,ul,li,p,span{margin:0;padding:0}body{width:100%;background-color:#eee;color:#222;font-family:Futura,Trebuchet MS,Arial,sans-serif;font-size:18px;-webkit-transition:-webkit-transform 4s ease-out;transition:transform 4s ease-out}.container{width:100%;text-align:center}header h1{font-size:112px;font-size:7rem;margin:5% 0 6%}@media only screen and (max-width:760px){header h1{font-size:3rem;margin-top:5%;}header img{width:100%;}}
-  </style>
-</head>
+  <style type="text/css">
+body,div,h1,h3,header,html,img,li,section,ul{margin:0;padding:0}body{width:100%;background-color:#eee;color:#222;font-family:Futura,Trebuchet MS,Arial,sans-serif;font-size:18px}.container{width:100%;text-align:center}header h1{font-size:112px;font-size:7rem;margin:5% 0 6%}@media only screen and (max-width:760px){header h1{font-size:3rem;margin-top:5%}header img{width:100%}}section{margin-bottom:3em}h3{font-size:32px;font-size:2rem}ul{list-style:none}li{line-height:2}
+</style>
+<script id="loadcss">
+(function(u,s){!function(e){"use strict";var n=function(n,t,o){var l,r=e.document,i=r.createElement("link");if(t)l=t;else{var a=(r.body||r.getElementsByTagName("head")[0]).childNodes;l=a[a.length-1]}var d=r.styleSheets;i.rel="stylesheet",i.href=n,i.media="only x",l.parentNode.insertBefore(i,t?l:l.nextSibling);var f=function(e){for(var n=i.href,t=d.length;t--;)if(d[t].href===n)return e();setTimeout(function(){f(e)})};return i.onloadcssdefined=f,f(function(){i.media=o||"all"}),i};"undefined"!=typeof module?module.exports=n:e.loadCSS=n}("undefined"!=typeof global?global:this);for(var i in u){loadCSS(u[i],s);}}(['dist/css/style.min.css'],document.getElementById("loadcss")));
+</script>
+<noscript>
+<link rel="stylesheet" href="dist/css/style.min.css">
+</noscript>
+  </head>
 <body>
   <div class="container">
     <header>
@@ -59,18 +65,6 @@
       <p>Copyright&nbsp;©<script>document.write(new Date().getFullYear())</script>&nbsp;Hirofumi Miyamoto</p>
     </footer>
   </div>
-
-  <script>
-  var cb = function() {
-  var l = document.createElement('link'); l.rel = 'stylesheet';
-  l.href = 'dist/css/style.min.css';
-  var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-  };
-  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-    webkitRequestAnimationFrame || msRequestAnimationFrame;
-  if (raf) raf(cb);
-  else window.addEventListener('load', cb);
-  </script>
 
   <script src="dist/js/script.js"></script>
 
