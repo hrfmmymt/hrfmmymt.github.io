@@ -57,7 +57,7 @@ gulp.task('watch', ['build', 'server'], () => {
   gulp.watch('./src/**/*.less', ['less']);
   gulp.watch('./src/**/*.es6', ['babel']);
   gulp.watch('./*.html', ['reload']);
-  gulp.watch('./dist/**/*.css', ['reload']);
+  gulp.watch('./dist/**/**.css', ['reload']);
   return gulp.watch('./dist/**/*.js', ['reload']);
 });
 
