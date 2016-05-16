@@ -1,0 +1,76 @@
+html,
+body,
+div,
+header,
+section,
+footer,
+h1,
+h3,
+img,
+a,
+dl,
+dd,
+dt,
+ul,
+li,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: #eee;
+  color: #222;
+  font-family: Futura,Trebuchet MS,Arial,sans-serif;
+  font-size: 18px;
+  transition: transform 4s ease-out;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  &__header {
+    & h1 {
+      font-size: 7rem;
+      margin: 5% 0 6%;
+    }
+  }
+  &__section {
+    margin-bottom: 3em;
+  }
+  &__footer {
+    margin-top: 6%;
+  }
+}
+
+@media only screen and (max-width:760px) {
+  .container {
+    &__header {
+      & h1 {
+        font-size: 3rem;
+        margin-top: 5%;
+      }
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.section__title {
+  font-size: 2rem;
+}
+
+.list {
+  list-style: none;
+  &__item {
+    line-height: 2;
+  }
+}
+
+.konamied {
+  transform: rotate(180deg);
+  background-image: url('http://static.blog.playstation.com/wp-content/uploads/avatars//Old-Konami-Logo.jpg?m=1414759874');
+}
