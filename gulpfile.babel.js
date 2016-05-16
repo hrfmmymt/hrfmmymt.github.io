@@ -1,5 +1,8 @@
 import gulp from 'gulp';
 import less from 'gulp-less';
+import postcss from 'gulp-postcss';
+import cssnext from 'gulp-cssnext';
+import cssnano from 'cssnano';
 import sourcemaps from 'gulp-sourcemaps';
 import pleeease from 'gulp-pleeease';
 import critical from 'critical';
@@ -28,6 +31,22 @@ gulp.task('less', () => {
     .pipe(pleeease({
       out: 'style.min.css',
     }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('cssnext', () => {
+  return gulp.src('./src/cssnext/*.css')
+    .pipe( sourcemaps.init())
+    .pipe(postcss([
+      require('postcss-mixins'),
+      require('postcss-nested'),
+      require('postcss-simple-vars'),
+      require('cssnano')
+    ]))
+    .pipe(cssnext([
+      require('cssnext'),
+    ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css'));
 });
