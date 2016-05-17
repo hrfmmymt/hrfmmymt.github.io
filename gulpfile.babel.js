@@ -1,10 +1,8 @@
 import gulp from 'gulp';
-import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import cssnext from 'gulp-cssnext';
 import cssnano from 'cssnano';
 import sourcemaps from 'gulp-sourcemaps';
-import pleeease from 'gulp-pleeease';
 import critical from 'critical';
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
@@ -24,18 +22,7 @@ gulp.task('reload', () => {
   return sync.reload();
 });
 
-gulp.task('less', () => {
-  return gulp.src('./src/less/*.less')
-    .pipe(sourcemaps.init())
-    .pipe(less())
-    .pipe(pleeease({
-      out: 'style.min.css',
-    }))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./dist/css'));
-});
-
-gulp.task('cssnext', () => {
+gulp.task('css', () => {
   return gulp.src('./src/cssnext/*.css')
     .pipe( sourcemaps.init())
     .pipe(postcss([
@@ -73,13 +60,13 @@ gulp.task('babel', () => {
 });
 
 gulp.task('watch', ['build', 'server'], () => {
-  gulp.watch('./src/**/*.less', ['less']);
+  gulp.watch('./src/cssnext/*.css', ['css']);
   gulp.watch('./src/**/*.es6', ['babel']);
   gulp.watch('./*.html', ['reload']);
   gulp.watch('./dist/**/**.css', ['reload']);
   return gulp.watch('./dist/**/*.js', ['reload']);
 });
 
-gulp.task('build', ['less']);
+gulp.task('build', ['css']);
 
 gulp.task('default', ['build']);
