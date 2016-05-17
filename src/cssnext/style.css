@@ -1,3 +1,8 @@
+:root {
+  --bg-color: #eee;
+  --font-stack:18px  Futura,Trebuchet MS,Arial,sans-serif;
+}
+
 html,
 body,
 div,
@@ -21,10 +26,9 @@ span {
 
 body {
   width: 100%;
-  background-color: #eee;
+  background-color: var(--bg-color);
   color: #222;
-  font-family: Futura,Trebuchet MS,Arial,sans-serif;
-  font-size: 18px;
+  font: var(--font-stack);
   transition: transform 4s ease-out;
 }
 
