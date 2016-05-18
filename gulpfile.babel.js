@@ -59,7 +59,7 @@ gulp.task('babel', () => {
     .pipe(gulp.dest('./dist/js/'))
 });
 
-gulp.task('watch', ['build', 'server'], () => {
+gulp.task('w', ['build', 'server'], () => {
   gulp.watch('./src/cssnext/*.css', ['css']);
   gulp.watch('./src/**/*.es6', ['babel']);
   gulp.watch('./*.html', ['reload']);
