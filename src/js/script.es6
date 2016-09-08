@@ -1,9 +1,9 @@
-const getwild_url = "//youtu.be/LgBxze0ye94?t=1m45s";
+const getWildUrl = "//youtu.be/LgBxze0ye94?t=1m45s";
 let isGetWild = false;
 
 // GetWild
 const getWildAndTough = () => {
-  window.location.href = getwild_url;
+  window.location.href = getWildUrl;
 }
 
 if(window.addEventListener) {
