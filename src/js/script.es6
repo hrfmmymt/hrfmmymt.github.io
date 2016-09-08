@@ -1,14 +1,22 @@
-if (window.addEventListener) {
+const getwild_url = "//youtu.be/LgBxze0ye94?t=1m45s";
+let isGetWild = false;
+
+// GetWild
+const getWildAndTough = () => {
+  window.location.href = getwild_url;
+}
+
+if(window.addEventListener) {
   let pressed = [];
-  let konamiCode = '38,38,40,40,37,39,37,39,66,65';
-  window.addEventListener('keydown', (k) => {
+  const getWildCode = "71,69,84,87,73,76,68";
+  window.addEventListener("keydown", k => {
     pressed.push(k.keyCode);
-    if (pressed.toString().indexOf(konamiCode) >= 0) {
-      let el = document.querySelector('body');
-      if (el.className.match(/(?:^|\s)konamied(?!\S)/)) {
-        el.className = el.className.replace(/(?:^|\s)konamied(?!\S)/g, '');
+    if(pressed.toString().indexOf(getWildCode) >= 0) {
+      if(!isGetWild) {
+        isGetWild = true;
+        getWildAndTough();
       } else {
-        el.className += ' konamied';
+        isGetWild = false;
       }
       pressed = [];
     }
