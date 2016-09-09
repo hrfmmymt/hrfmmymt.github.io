@@ -3,7 +3,6 @@ import postcss from 'gulp-postcss';
 import cssnext from 'gulp-cssnext';
 import cssnano from 'cssnano';
 import sourcemaps from 'gulp-sourcemaps';
-import critical from 'critical';
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import sync from 'browser-sync';
