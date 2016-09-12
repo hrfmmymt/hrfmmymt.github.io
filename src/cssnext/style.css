@@ -78,3 +78,11 @@ body {
   transform: rotate(180deg);
   background-image: url('http://static.blog.playstation.com/wp-content/uploads/avatars//Old-Konami-Logo.jpg?m=1414759874');
 }
+
+.bg__movie {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  min-width: 1024px;
+}
