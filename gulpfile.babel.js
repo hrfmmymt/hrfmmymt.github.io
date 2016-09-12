@@ -2,6 +2,8 @@ import gulp from 'gulp';
 import postcss from 'gulp-postcss';
 import cssnext from 'gulp-cssnext';
 import cssnano from 'cssnano';
+import stylelint from "stylelint";
+import reporter from "postcss-reporter";
 import sourcemaps from 'gulp-sourcemaps';
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
@@ -29,6 +31,8 @@ gulp.task('css', () => {
       require('postcss-mixins'),
       require('postcss-nested'),
       require('postcss-simple-vars'),
+      stylelint(),
+      reporter({ clearMessages: true }),
       require('cssnano')
     ]))
     .pipe(cssnext([

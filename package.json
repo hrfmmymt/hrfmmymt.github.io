@@ -18,6 +18,8 @@
     "gulp-postcss": "^6.1.1",
     "postcss-mixins": "^4.0.1",
     "postcss-nested": "^1.0.0",
-    "postcss-simple-vars": "^1.2.0"
+    "postcss-reporter": "^1.4.1",
+    "postcss-simple-vars": "^1.2.0",
+    "stylelint": "^7.2.0"
   }
 }
