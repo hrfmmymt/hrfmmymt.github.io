@@ -25,7 +25,7 @@ gulp.task('reload', () => {
 });
 
 gulp.task('css', () => {
-  return gulp.src('./src/cssnext/*.css')
+  return gulp.src('./src/css/*.css')
     .pipe( sourcemaps.init())
     .pipe(postcss([
       require('postcss-mixins'),
@@ -71,7 +71,7 @@ gulp.task("lint", () => {
 });
 
 gulp.task('w', ['build', 'server'], () => {
-  gulp.watch('./src/cssnext/*.css', ['css']);
+  gulp.watch('./src/css/*.css', ['css']);
   gulp.watch('./src/**/*.es6', ['babel']);
   gulp.watch('./*.html', ['reload']);
   gulp.watch('./dist/**/**.css', ['reload']);
