@@ -1,6 +1,5 @@
 import gulp from 'gulp';
 import postcss from 'gulp-postcss';
-import cssnext from 'gulp-cssnext';
 import cssnano from 'cssnano';
 import stylelint from "stylelint";
 import reporter from "postcss-reporter";
@@ -30,13 +29,10 @@ gulp.task('css', () => {
     .pipe(postcss([
       require('postcss-mixins'),
       require('postcss-nested'),
-      require('postcss-simple-vars'),
+      require('postcss-custom-properties'),
       stylelint(),
       reporter({ clearMessages: true }),
       require('cssnano')
-    ]))
-    .pipe(cssnext([
-      require('cssnext'),
     ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css'));
