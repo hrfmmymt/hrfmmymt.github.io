@@ -19,6 +19,7 @@
     "gulp-eslint": "^3.0.1",
     "gulp-postcss": "^6.1.1",
     "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
     "postcss-custom-properties": "^5.0.1",
     "postcss-mixins": "^4.0.1",
     "postcss-nested": "^1.0.0",
