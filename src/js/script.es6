@@ -7,9 +7,7 @@ if(window.addEventListener) {
   window.addEventListener("keydown", k => {
     pressed.push(k.keyCode);
 
-    if(pressed.toString().indexOf(getWildCode) >= 0) {
-      pressed = [];
-    } else if(pressed.toString().indexOf(konamiCode) >= 0) {
+    if(pressed.toString().indexOf(konamiCode) >= 0) {
       if(bodyEl.className.match(/(?:^|\s)konamied(?!\S)/)) {
         bodyEl.className = bodyEl.className.replace(/(?:^|\s)konamied(?!\S)/g, "");
       } else {
