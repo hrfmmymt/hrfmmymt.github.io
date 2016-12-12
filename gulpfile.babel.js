@@ -51,7 +51,7 @@ gulp.task('critical', ['build'], (cb) => {
 });
 
 gulp.task('babel', ["lint"], () => {
-  return gulp.src('./src/js/*.es6')
+  return gulp.src('./src/js/*.js')
     .pipe(babel({
       presets: ['es2015']
     }))
@@ -60,7 +60,7 @@ gulp.task('babel', ["lint"], () => {
 });
 
 gulp.task("lint", () => {
-  return gulp.src("./src/js/*.es6")
+  return gulp.src("./src/js/*.js")
     .pipe(eslint({useEslintrc : true}))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -68,7 +68,7 @@ gulp.task("lint", () => {
 
 gulp.task('w', ['build', 'server'], () => {
   gulp.watch('./src/css/*.css', ['css']);
-  gulp.watch('./src/**/*.es6', ['babel']);
+  gulp.watch('./src/**/*.js', ['babel']);
   gulp.watch('./*.html', ['reload']);
   gulp.watch('./dist/**/**.css', ['reload']);
   return gulp.watch('./dist/**/*.js', ['reload']);
