@@ -1,5 +1,7 @@
 // Use Tumblr API to show recent posts list.
-const tumblrRecent = data => {
+window.tumblrRecent = {};
+
+tumblrRecent = data => {
   for(let i = 0; i < 5; i++) {
     const tumblrList = document.createElement("li");
     const tumblrLink = document.createElement("a");
@@ -40,7 +42,5 @@ const tumblrRecent = data => {
   const tumblrScript = document.createElement("script");
   tumblrScript.async = !0,
   tumblrScript.src = "//api.tumblr.com/v2/blog/hrfmmymt.tumblr.com/posts?api_key=UzvNmLeVFBpiFMakyac4wPlteUevfkSnQijUz4V8Kcuisvmip7&type=text&callback=tumblrRecent";
-
-  const tumblrScriptTag = document.getElementsByTagName("script")[0];
-  tumblrScriptTag.parentNode.insertBefore(tumblrScript, tumblrScriptTag);
+  document.body.appendChild(tumblrScript);
 })();
