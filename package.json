@@ -12,8 +12,8 @@
     "watch:js": "watchify -t babelify ./src/js/script.js -o ./dist/js/script.js -d -v",
     "serve": "browser-sync start --server --files './index.html, ./dist/css/*.css, ./dist/js/*.js' --config ./bs-config.js",
     "watch": "npm run serve & npm run watch:css & npm run watch:js",
-    "build": "npm run css && npm run js",
-    "test": "lint:css && lint:js"
+    "build": "npm test && npm run css && npm run js",
+    "test": "npm run lint:css && npm run lint:js"
   },
   "author": "hrfmmymt",
   "license": "ISC",
