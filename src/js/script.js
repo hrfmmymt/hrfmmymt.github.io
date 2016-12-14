@@ -1,5 +1,3 @@
-"use strict;"
-
 // Use Tumblr API to show recent posts list.
 const tumblrRecent = data => {
   for(let i = 0; i < 5; i++) {
