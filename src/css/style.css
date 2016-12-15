@@ -76,5 +76,5 @@ body {
 
 .konamied {
   transform: rotate(180deg);
-  background-image: url('http://static.blog.playstation.com/wp-content/uploads/avatars//Old-Konami-Logo.jpg?m=1414759874');
+  background-image: url("http://static.blog.playstation.com/wp-content/uploads/avatars//Old-Konami-Logo.jpg?m=1414759874");
 }
