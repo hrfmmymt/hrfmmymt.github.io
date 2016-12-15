@@ -4,6 +4,7 @@ node_js:
   - "6"
 before_install:
   - "npm install -g eslint"
+  - "npm install --save-dev babel-eslint"
 notifications:
   email: false
   slack:
