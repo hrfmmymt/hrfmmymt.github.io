@@ -15,7 +15,8 @@ jobs:
         command: yarn --version
 
       - checkout
-      -run: yarn install
+      -run:
+        command: yarn install
 
       -run:
         name: Run Tests
