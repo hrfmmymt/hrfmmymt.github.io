@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Based on frontend-starter-2016",
   "scripts": {
+    "start": "npm run serve & npm run watch:css & npm run watch:js",
     "css": "npm run lint:css && postcss -c ./.postcssrc.json",
     "lint:css": "stylelint ./src/**/*.css",
     "watch:css": "postcss -c ./.postcssrc.json -w --map",
@@ -11,7 +12,6 @@
     "uglify:js": "uglifyjs ./dist/js/script.js -m -o ./dist/js/script.js",
     "watch:js": "watchify -t babelify ./src/js/script.js -o 'uglifyjs -cm > ./dist/js/script.js' -d -v",
     "serve": "browser-sync start --server --files './index.html, ./dist/css/*.css, ./dist/js/*.js' --config ./bs-config.js",
-    "watch": "npm run serve & npm run watch:css & npm run watch:js",
     "build": "npm run css && npm run js",
     "test": "npm run lint:css && npm run lint:js"
   },
