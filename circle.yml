@@ -12,10 +12,10 @@ jobs:
 
       - run:
         name: pre
-        command: - yarn --version
+        command: yarn --version
 
       - checkout
-      -run: - yarn install
+      -run: yarn install
 
       -run:
         name: Run Tests
