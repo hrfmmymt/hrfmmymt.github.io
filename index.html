@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!doctype html>
+<html amp lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="author" content="Hirofumi Miyamoto">
@@ -11,13 +11,17 @@
   <meta property="og:description" content="hrfmmymt">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <title>hrfmmymt</title>
-  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="canonical" href="https://hrfmmymt.github.io/">
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-custom>a,amp-img,body,dd,div,dl,dt,footer,h1,h3,header,html,li,p,section,span,ul{margin:0;padding:0}body{width:100%;background-color:#fff;color:#222;font:18px Futura,Trebuchet MS,Arial,sans-serif;-webkit-transition:-webkit-transform 4s ease-out;transition:-webkit-transform 4s ease-out;transition:transform 4s ease-out;transition:transform 4s ease-out,-webkit-transform 4s ease-out}.container{width:100%;text-align:center;}.container__header h1{font-size:7rem;margin:5% 0 6%}.container__header amp-img{max-width:512px;margin:0 auto}.container__section{margin-bottom:3em}.container__footer{margin:2%}@media only screen and (max-width:760px){.container__header h1{font-size:3rem;margin-top:5%}.container__header amp-img{width:100%}.container__footer{margin:6%}}.section__title{font-size:2rem}.list{list-style:none;}.list__item{line-height:2}.konamied{-webkit-transform:rotate(180deg);transform:rotate(180deg);background-image:url(http://static.blog.playstation.com/wp-content/uploads/avatars/Old-Konami-Logo.jpg?m=1414759874)}</style>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
 <body>
   <div class="container">
     <header class="container__header">
       <h1>hrfmmymt</h1>
-      <img itemprop="image" alt="俺画像" src="//pbs.twimg.com/profile_images/672293869120163840/7q4wxHvu.jpg" width="512">
+      <amp-img itemprop="image" alt="俺画像" src="//pbs.twimg.com/profile_images/672293869120163840/7q4wxHvu.jpg" width="512" height="512" layout="responsive"></amp-img>
     </header>
 
     <section class="container__section" id="about">
@@ -53,7 +57,13 @@
 
     <section class="container__section" id="recentPosts">
       <h3 class="section__title">recent posts</h3>
-      <ul class="list" id="recentPostsList"></ul>
+      <ul class="list" id="recentPostsList">
+        <li class="list__item"><a href="http://hrfmmymt.tumblr.com/post/157476153442/react-で-wai-aria-対応の-modal-dialog-window-を実装した">React で WAI-ARIA 対応の modal dialog (window) を実装した</a></li>
+        <li class="list__item"><a href="http://hrfmmymt.tumblr.com/post/156709551777/柿食えば-react-babel-webpack">柿食えば React - Babel - Webpack</a></li>
+        <li class="list__item"><a href="http://hrfmmymt.tumblr.com/post/154415967187/electron-一年振りの-所感など">Electron 一年振りの 所感など</a></li>
+        <li class="list__item"><a href="http://hrfmmymt.tumblr.com/post/153467874547/backlog-のデスクトップアプリ">Backlog のデスクトップアプリ</a></li>
+        <li class="list__item"><a href="http://hrfmmymt.tumblr.com/post/150112369172/tab-ui-a11y">Tab UI&nbsp;a11y</a></li>
+      </ul>
     </section>
 
     <section class="container__section" id="codes">
@@ -66,21 +76,25 @@
     <hr>
 
     <footer class="container__footer" id="copyright">
-      <p>Copyright&nbsp;©<script>document.write(new Date().getFullYear())</script>&nbsp;Hirofumi Miyamoto</p>
+      <p>by Hirofumi Miyamoto</p>
     </footer>
   </div>
 
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-62083994-1', 'hrfmmymt.github.io');
-    ga('send', 'pageview');
-  </script>
-
-  <script src="dist/js/script.js"></script>
+  <amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-62083994-1"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+    </script>
+  </amp-analytics>
 
 </body>
 </html>
