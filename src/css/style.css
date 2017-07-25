@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #eee;
+  --bg-color: #fff;
   --font-stack: 18px Futura, Trebuchet MS, Arial, sans-serif;
 }
 
@@ -11,7 +11,7 @@ section,
 footer,
 h1,
 h3,
-img,
+amp-img,
 a,
 dl,
 dd,
@@ -40,12 +40,16 @@ body {
       font-size: 7rem;
       margin: 5% 0 6%;
     }
+    & amp-img {
+      max-width: 512px;
+      margin: 0 auto;
+    }
   }
   &__section {
     margin-bottom: 3em;
   }
   &__footer {
-    margin-top: 6%;
+    margin: 2%;
   }
 }
 
@@ -56,9 +60,12 @@ body {
         font-size: 3rem;
         margin-top: 5%;
       }
-      & img {
+      & amp-img {
         width: 100%;
       }
+    }
+    &__footer {
+      margin: 6%;
     }
   }
 }

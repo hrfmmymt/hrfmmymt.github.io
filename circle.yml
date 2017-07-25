@@ -1,4 +1,29 @@
-test:
-  pre:
-    - npm install -g eslint
-    - npm install -g babel-eslint
+version: 2
+jobs:
+  build:
+    working_directory: /
+    docker:
+      -image: node:6.2.1
+    timezone: Asia/Tokyo
+
+    steps:
+      - run:
+        - curl -o- -L https://yarnpkg.com/install.sh | bash
+
+      - run:
+        name: pre
+        command: yarn --version
+
+      - checkout
+      -run:
+        command: yarn install
+
+      -run:
+        name: Run Tests
+        command:
+          - npm install -g eslint
+          - npm install -g babel-eslint
+
+      - save_cache:
+        paths:
+          - "~/.cache/yarn"
