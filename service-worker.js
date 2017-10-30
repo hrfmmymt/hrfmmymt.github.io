@@ -1,5 +1,9 @@
-var cacheName = '1.0.0';
-var filesToCache = [];
+const cacheName = '0.0.1';
+const filesToCache = [
+  '/',
+  '/index.html',
+  '//pbs.twimg.com/profile_images/672293869120163840/7q4wxHvu.jpg'
+];
 
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
@@ -7,6 +11,15 @@ self.addEventListener('install', function(e) {
     caches.open(cacheName).then(function(cache) {
       console.log('[ServiceWorker] Caching app shell');
       return cache.addAll(filesToCache);
+    })
+  );
+});
+
+self.addEventListener('fetch', function(e) {
+  console.log('[ServiceWorker] Fetch', e.request.url);
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
     })
   );
 });
