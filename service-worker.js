@@ -1,25 +1,49 @@
-const cacheName = '0.0.2';
-const filesToCache = [
-  '/',
-  '/index.html',
-  '/img/profile.jpg'
+'use strict';
+
+importScripts('workbox-sw.prod.v2.1.0.js');
+
+/**
+ * DO NOT EDIT THE FILE MANIFEST ENTRY
+ *
+ * The method precache() does the following:
+ * 1. Cache URLs in the manifest to a local cache.
+ * 2. When a network request is made for any of these URLs the response
+ *    will ALWAYS comes from the cache, NEVER the network.
+ * 3. When the service worker changes ONLY assets with a revision change are
+ *    updated, old cache entries are left as is.
+ *
+ * By changing the file manifest manually, your users may end up not receiving
+ * new versions of files because the revision hasn't changed.
+ *
+ * Please use workbox-build or some other tool / approach to generate the file
+ * manifest which accounts for changes to local files and update the revision
+ * accordingly.
+ */
+const fileManifest = [
+  {
+    'url': 'img/profile.jpg',
+    'revision': 'bf0e942ee8da86f4e30e168ebafc3ed8'
+  },
+  {
+    'url': 'index.html',
+    'revision': '94f5e663c76292649dce48f25852e03c'
+  },
+  {
+    'url': 'install-service-worker.html',
+    'revision': 'd8b1353c27826def6cf2a3506ae0399d'
+  }
 ];
 
-self.addEventListener('install', event => {
-  console.log('[ServiceWorker] Install');
-  event.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
-    })
-  );
-});
+const workboxSW = new self.WorkboxSW();
+workboxSW.precache(fileManifest);
 
-self.addEventListener('fetch', event => {
-  console.log('[ServiceWorker] Fetch', event.request.url);
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
-    })
-  );
-});
+// workboxSW.router.registerRoute('/*', args => {
+//   if (args.event.request.mode !== 'navigate') {
+//     return workboxSW.strategies.cacheFirst().handle(args);
+//   }
+//   return workboxSW.strategies.networkFirst().handle(args);
+// });
+
+// workboxSW.router.registerRoute(/(.*)cdn\.ampproject\.org(.*)/,
+//   workboxSW.strategies.staleWhileRevalidate()
+// );

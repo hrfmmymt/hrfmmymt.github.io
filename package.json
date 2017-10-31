@@ -5,12 +5,15 @@
   "scripts": {
     "start": "npm run serve",
     "lint:js": "eslint",
-    "serve": "browser-sync start --server --files './index.html --config ./bs-config.js"
+    "serve": "browser-sync start --server --files './index.html, ./install-service-worker.html, ./service-worker.js' --config ./bs-config.js",
+    "build": "workbox generate:sw"
   },
   "author": "hrfmmymt",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.5",
-    "eslint": "^4.10.0"
+    "eslint": "^4.10.0",
+    "workbox-cli": "^2.1.0",
+    "workbox-sw": "^2.1.0"
   }
 }

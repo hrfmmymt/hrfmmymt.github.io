@@ -1,7 +1,7 @@
 {
   "name" : "hrfmmymt.github.io",
   "short_name" : "hrfmmymt",
-  "description" : "hrfmmymt PWA website",
+  "description" : "hrfmmymt SWAMP website",
   "start_url" : "/",
   "display" : "standalone",
   "orientation" : "any",
