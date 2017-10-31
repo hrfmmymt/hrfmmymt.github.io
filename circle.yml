@@ -22,7 +22,6 @@ jobs:
         name: Run Tests
         command:
           - npm install -g eslint
-          - npm install -g babel-eslint
 
       - save_cache:
         paths:
