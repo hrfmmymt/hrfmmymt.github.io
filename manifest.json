@@ -9,27 +9,27 @@
   "theme_color" : "#fff",
   "icons": [
     {
-      "src" : "img/icon.png",
+      "src" : "img/profile.jpg",
       "sizes" : "72x72",
       "type" : "image/png"
     },
     {
-      "src" : "img/icon.png",
+      "src" : "img/profile.jpg",
       "sizes" : "152x152",
       "type" : "image/png"
     },
     {
-      "src" : "img/icon.png",
+      "src" : "img/profile.jpg",
       "sizes" : "192x192",
       "type" : "image/png"
     },
     {
-      "src" : "img/icon.png",
+      "src" : "img/profile.jpg",
       "sizes" : "256x256",
       "type" : "image/png"
     },
     {
-      "src" : "img/icon.png",
+      "src" : "img/profile.jpg",
       "sizes" : "512x512",
       "type" : "image/png"
     }
