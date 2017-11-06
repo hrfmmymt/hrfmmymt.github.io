@@ -1,5 +1,3 @@
-'use strict';
-
 importScripts('workbox-sw.prod.v2.1.0.js');
 
 /**
@@ -21,29 +19,18 @@ importScripts('workbox-sw.prod.v2.1.0.js');
  */
 const fileManifest = [
   {
-    'url': 'img/profile.jpg',
-    'revision': 'bf0e942ee8da86f4e30e168ebafc3ed8'
+    "url": "img/profile.jpg",
+    "revision": "bf0e942ee8da86f4e30e168ebafc3ed8"
   },
   {
-    'url': 'index.html',
-    'revision': '94f5e663c76292649dce48f25852e03c'
+    "url": "index.html",
+    "revision": "52d744a56e57e81a5a95102ce14da3d0"
   },
   {
-    'url': 'install-service-worker.html',
-    'revision': 'd8b1353c27826def6cf2a3506ae0399d'
+    "url": "install-service-worker.html",
+    "revision": "d8b1353c27826def6cf2a3506ae0399d"
   }
 ];
 
 const workboxSW = new self.WorkboxSW();
 workboxSW.precache(fileManifest);
-
-// workboxSW.router.registerRoute('/*', args => {
-//   if (args.event.request.mode !== 'navigate') {
-//     return workboxSW.strategies.cacheFirst().handle(args);
-//   }
-//   return workboxSW.strategies.networkFirst().handle(args);
-// });
-
-// workboxSW.router.registerRoute(/(.*)cdn\.ampproject\.org(.*)/,
-//   workboxSW.strategies.staleWhileRevalidate()
-// );
