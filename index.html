@@ -25,7 +25,16 @@
   <div class="container">
     <header class="container__header">
       <h1>hrfmmymt</h1>
-      <amp-img itemprop="image" alt="俺画像" src="/img/profile.jpg" width="512" height="512" layout="responsive"></amp-img>
+      <amp-img alt="profile image"
+        width="512"
+        height="512"
+        src="/img/profile.webp">
+        <amp-img alt="profile image"
+          fallback
+          width="512"
+          height="512"
+          src="/img/profile.jpg"></amp-img>
+      </amp-img>
     </header>
 
     <section class="container__section" id="about">

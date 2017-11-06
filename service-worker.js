@@ -19,12 +19,20 @@ importScripts('workbox-sw.prod.v2.1.0.js');
  */
 const fileManifest = [
   {
+    "url": "img/favicon.ico",
+    "revision": "f08356ea0b49281a115ee7b4a91e064b"
+  },
+  {
     "url": "img/profile.jpg",
     "revision": "bf0e942ee8da86f4e30e168ebafc3ed8"
   },
   {
+    "url": "img/profile.webp",
+    "revision": "962f648b09fbee13d03e7afb3bd60d88"
+  },
+  {
     "url": "index.html",
-    "revision": "52d744a56e57e81a5a95102ce14da3d0"
+    "revision": "4c0e9df8622e6d49d277cb848f2bef49"
   },
   {
     "url": "install-service-worker.html",
