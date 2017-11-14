@@ -19,6 +19,10 @@ importScripts('workbox-sw.prod.v2.1.0.js');
  */
 const fileManifest = [
   {
+    "url": "bs-config.js",
+    "revision": "167c68f3b7cd221033090f14b28a9629"
+  },
+  {
     "url": "img/favicon.ico",
     "revision": "f08356ea0b49281a115ee7b4a91e064b"
   },
@@ -32,7 +36,7 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "032d38f7c0ead1d4223ee746888899e8"
+    "revision": "e5df2e9be9abb7e00103550e55bbc4cb"
   },
   {
     "url": "install-service-worker.html",
