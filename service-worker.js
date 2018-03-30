@@ -19,10 +19,6 @@ importScripts('workbox-sw.prod.v2.1.0.js');
  */
 const fileManifest = [
   {
-    "url": "bs-config.js",
-    "revision": "167c68f3b7cd221033090f14b28a9629"
-  },
-  {
     "url": "img/favicon.ico",
     "revision": "f08356ea0b49281a115ee7b4a91e064b"
   },

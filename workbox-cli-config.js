@@ -6,6 +6,7 @@ module.exports = {
   "swDest": "./service-worker.js",
   "globIgnores": [
     "workbox-cli-config.js",
-    "node_modules/**/*"
+    "node_modules/**/*",
+    "bs-config.js"
   ]
 };
