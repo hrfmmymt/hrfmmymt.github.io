@@ -6,7 +6,8 @@
     "start": "npm run serve",
     "lint:js": "eslint",
     "serve": "browser-sync start --server --files './index.html, ./install-service-worker.html, ./service-worker.js' --config ./bs-config.js",
-    "build": "workbox generate:sw"
+    "build": "workbox generate:sw",
+    "test": "npm run lint:js"
   },
   "author": "hrfmmymt",
   "license": "ISC",
