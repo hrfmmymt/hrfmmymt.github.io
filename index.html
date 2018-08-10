@@ -74,10 +74,6 @@
       margin-bottom: 3em
     }
 
-    amp-list {
-      max-height: 11rem;
-    }
-
     .container__footer {
       margin: 2%
     }
@@ -158,8 +154,8 @@
     </section>
 
     <section class="container__section" id="recentPosts">
-      <h3 class="section__title">posts</h3>
-      <amp-list width="auto" height="120" layout="fixed-height" src="https://iiyatsu.hrfmmymt.com/api" items=".">
+      <h3 class="section__title">recent posts</h3>
+      <amp-list width="auto" height="120" layout="fixed-height" src="https://iiyatsu.hrfmmymt.com/api" items="." max-items="5">
         <template type="amp-mustache">
           <div class="list__item">
             <a href="https://iiyatsu.hrfmmymt.com/posts/{{url}}">{{title}}</a>
