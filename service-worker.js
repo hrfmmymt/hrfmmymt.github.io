@@ -32,7 +32,7 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "cf83b650962563adc520dd61324b8484"
+    "revision": "03d002a30df1d88be0da0410f2ebc1d6"
   },
   {
     "url": "install-service-worker.html",
