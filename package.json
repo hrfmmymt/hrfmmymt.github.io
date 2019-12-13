@@ -12,9 +12,9 @@
   "author": "hrfmmymt",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "eslint": "^5.16.0",
-    "workbox-cli": "^4.3.1",
-    "workbox-sw": "^4.3.1"
+    "browser-sync": "2.26.7",
+    "eslint": "5.16.0",
+    "workbox-cli": "4.3.1",
+    "workbox-sw": "4.3.1"
   }
 }
