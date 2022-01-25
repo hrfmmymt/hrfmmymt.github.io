@@ -2,5 +2,13 @@
   "extends": [
     "config:base",
     ":preserveSemverRanges"
+  ],
+  "timezone": "Asia/Tokyo",
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    }
   ]
 }
