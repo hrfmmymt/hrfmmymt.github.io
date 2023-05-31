@@ -14,7 +14,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "eslint": "^8.0.0",
-    "workbox-cli": "^6.0.0",
-    "workbox-sw": "^6.0.0"
+    "workbox-cli": "^7.0.0",
+    "workbox-sw": "^7.0.0"
   }
 }
