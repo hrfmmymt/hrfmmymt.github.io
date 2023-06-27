@@ -188,17 +188,19 @@
   <amp-install-serviceworker src="/service-worker.js" data-iframe-src="/install-service-worker.html" layout="nodisplay">
   </amp-install-serviceworker>
 
-  <amp-analytics type="googleanalytics">
-    <script type="application/json">
+  <amp-analytics  type="googleanalytics"  config="https://amp.analytics-debugger.com/ga4.json"  data-credentials="include">
+    <script  type="application/json">
     {
       "vars": {
-        "account": "UA-62083994-1"
-      },
-      "triggers": {
-        "trackPageview": {
-          "on": "visible",
-          "request": "pageview"
-        }
+        "GA4_MEASUREMENT_ID": "G-00NCJG3BHG",
+        "GA4_ENDPOINT_HOSTNAME": "www.google-analytics.com",
+        "GOOGLE_CONSENT_ENABLED": false,
+        "WEBVITALS_TRACKING": false,
+        "PERFORMANCE_TIMING_TRACKING": false,
+        "DEFAULT_PAGEVIEW_ENABLED": true,
+        "SEND_DOUBLECLICK_BEACON": false,
+        "DISABLE_REGIONAL_DATA_COLLECTION": false,
+        "ENHANCED_MEASUREMENT_SCROLL": false
       }
     }
     </script>
